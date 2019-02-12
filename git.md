@@ -150,32 +150,32 @@ committer eiji-noguchi <eiji.program@gmail.com> 1549774515 +0900
 - 100644:ファイル
 - 040000:ディレクトリ
 
-# 備考
+備考
 Gitコマンドメモ
 - リポジトリの削除
-rm -rf .git
+ - rm -rf .git
 - 変更したファイルの状態確認（ワークツリーとステージの比較、ステージとリポジトリの比較）
-git status
+ - git status
 - ステージング前のファイルの変更点確認（ワークツリーとステージの比較）
-git diff <ファイル名>
+ - git diff <ファイル名>
 - ステージングされたファイルの変更点確認（ステージとリポジトリの比較）
-git diff --staged
+ - git diff --staged
 - 変更履歴の確認
-git log
-git log --oneline
-git log -p <ファイル名>
-git log -n <コミット数>
+ - git log
+ - git log --oneline
+ - git log -p <ファイル名>
+ - git log -n <コミット数>
 - リポジトリとワークツリーからファイル、ディレクトリの削除
-git rm <ファイル名>
-git rm -r <ディレクトリ名>
+ - git rm <ファイル名>
+ - git rm -r <ディレクトリ名>
 - リポジトリからのみファイルの削除（ワークツリーには残る）
-git rm --cached <ファイル名>
+ - git rm --cached <ファイル名>
 - ファイルの移動（ファイル名の変更）
-git mv <旧ファイル名> <新ファイル名>
+ - git mv <旧ファイル名> <新ファイル名>
 - リモートリポジトリからコピーの作成
-git clone <リポジトリ名>
+ - git clone <リポジトリ名>
 - originというショートカットでurlのリモートリポジトリを登録する
-git remote add origin <リモートリポジトリのURL>
+ - git remote add origin <リモートリポジトリのURL>
 - ローカルリポジトリの内容をリモートリポジトリに登録する
-git push <リモート名> <ブランチ名>
+ - git push <リモート名> <ブランチ名>
 - 「.gitignore」ファイル内にバージョン管理したくないファイル名を記載することで、そのファイルを無視できる
