@@ -162,9 +162,9 @@ Gitコマンドメモ
   - git diff --staged
 - 変更履歴の確認
   - git log
-  - git log --oneline
-  - git log -p <ファイル名>
-  - git log -n <コミット数>
+  - git log --oneline //一行で表示
+  - git log -p <ファイル名>  //ファイルの変更差分を表示する
+  - git log -n <コミット数>  //表示するコミット数を制限する
 - リポジトリとワークツリーからファイル、ディレクトリの削除
   - git rm <ファイル名>
   - git rm -r <ディレクトリ名>
