@@ -107,7 +107,7 @@ committer eiji-noguchi <github@example.com> 1549210901 +0900
 - $ vim hello //helloディレクトリを編集し保存する
 - $ git add hello
 - $ git commit -m 'update hello'
-- $ git cat-file -p master
+- $ git cat-file -p HEAD  //HEADコマンド：今自分がいるブランチの最新のコミット
 tree 9e610c2a62cae34a4d476e1d4eeb3d057a43a339
 parent 41d0cd83f6b491c66fd4f009ef77052a5c8d4673
 author eiji-noguchi <github@example.com> 1549211186 +0900
@@ -179,3 +179,13 @@ Gitコマンドメモ
 - ローカルリポジトリの内容をリモートリポジトリに登録する
   - git push <リモート名> <ブランチ名>
 - 「.gitignore」ファイル内にバージョン管理したくないファイル名を記載することで、そのファイルを無視できる
+- ファイルへの変更を取り消す
+  - git checkout -- <ファイル名> //ワークツリーのファイルをステージから取得し反映させる
+  - git checkout -- <ディレクトリ名> //ワークツリーのディレクトリをステージから取得し反映させる
+  - git checkout -- . //全変更を取り消す
+- ステージした変更の取り消し
+  - git reset HEAD <ファイル名>  //リポジトリから直前のコミットの情報を取得し、ステージの内容を上書きする
+  - git reset HEAD <ディレクトリ名>
+  - git reset HEAD <ファイル名>
+- 直前のコミットをやり直す
+  - git commit --amend  //現在のステージの内容で、直前のコミットを上書きする ※push後には使ってはいけない
