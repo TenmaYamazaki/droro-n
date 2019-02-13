@@ -82,7 +82,7 @@ e965047ad7c57865823c7d992b1d046ea66edf78
 
 ### コミットファイルの確認
 ツリーファイルが作成されたことで、ファイル構造を追えるようになった。では、いつ、誰が、何を、何のために変更したのかを確認してみる。
-- $ git cat-file -p master  //最新のコミットファイルの中身を表示する
+- $ git cat-file -p HEAD  //最新のコミットファイルの中身を表示する
 tree 90fa7e05d3e0a8c71be3b43fd1cae61d1b8f6e0a
 author eiji-noguchi <github@example.com> 1549210901 +0900
 committer eiji-noguchi <github@example.com> 1549210901 +0900
@@ -125,11 +125,11 @@ committer eiji-noguchi <github@example.com> 1549211186 +0900
 - $ mkdir subdir
 - $ echo 'Goodbye,world' >subdir/goodbye
 - $ git add subdir
-$ git commit -m 'add goodbye'
+- $ git commit -m 'add goodbye'
 [master 79d9920] add goodbye
  1 file changed, 1 insertion(+)
  create mode 100644 subdir/goodbye
-- $ git cat-file -p master
+- $ git cat-file -p HEAD
 tree f51ccf26d3de80812e99db8abe654074786b39f0
 parent e4f4a712740c385e0da4eefefee96f6ccbe07f2d
 author eiji-noguchi <eiji.program@gmail.com> 1549774515 +0900
